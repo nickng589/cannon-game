@@ -7,18 +7,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Awake()
+    {
+        return;
+    }
+
     #region StartButton
-    private void Play()
+    public void Play()
 	{
-        SceneManageer.LoadScene("Cannon-Game");
+        SceneManager.LoadScene("Game-Screen");
 	}
     #endregion
 
     #region Reset HighScore
-    private void Reset()
+    public void Restart()
 	{
+        SceneManager.LoadScene("Game-Screen");
+    }
+    #endregion
 
-	}
+    #region Quit Game
+    public void Quit()
+    {
+        Application.Quit();
+    }
     #endregion
 }
 
