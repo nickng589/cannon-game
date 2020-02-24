@@ -18,10 +18,14 @@ public class RockScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("HI");
+        //Debug.Log("HI");
         if (coll.gameObject.tag == "Projectile")
         {
-            Debug.Log("HIT");
+            //Debug.Log("HIT");
+        }
+        if (coll.gameObject.tag == "Player")
+        {
+            Debug.Log("PLAYER");
         }
     }
 }

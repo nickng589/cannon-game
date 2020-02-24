@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Cannon-Game.unity
-    guid: 07b7346752f884d5e829ab3a4e674700
+    path: Assets/Scenes/Start-Screen.unity
+    guid: 586a5ce6e22c2477e8f87bfb8c4f876f
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
-    guid: a474a7257796e4482b9dde324ce30fba
+    path: Assets/Scenes/Game-Screen.unity
+    guid: 68b749b7a88e45745bb5d5cb21e45976
+  - enabled: 1
+    path: Assets/Scenes/Canon-Game.unity
+    guid: 07b7346752f884d5e829ab3a4e674700
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
