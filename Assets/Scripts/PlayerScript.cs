@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -67,6 +68,9 @@ public class PlayerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("HI");
+        if (col.CompareTag("Rock"))
+        {
+            SceneManager.LoadScene("Lose-Screen");
+        }
     }
 }
