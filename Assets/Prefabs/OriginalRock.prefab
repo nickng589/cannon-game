@@ -62,6 +62,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3232648624415372018, guid: 211ba4baf9e4a2747ba88d100a43b1ed,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232648624415372018, guid: 211ba4baf9e4a2747ba88d100a43b1ed,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3232648624415372028, guid: 211ba4baf9e4a2747ba88d100a43b1ed,
         type: 3}
       propertyPath: babyRock1
