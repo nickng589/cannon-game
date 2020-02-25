@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 1664135131}
   - component: {fileID: 1664135130}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,12 +300,12 @@ PrefabInstance:
     - target: {fileID: 327675056085001950, guid: adc0ac09eaad7944a8979fb0d8107b06,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327675056085001950, guid: adc0ac09eaad7944a8979fb0d8107b06,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.23
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 327675056085001950, guid: adc0ac09eaad7944a8979fb0d8107b06,
         type: 3}
