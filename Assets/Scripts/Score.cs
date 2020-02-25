@@ -26,17 +26,24 @@ public class Score : MonoBehaviour
     {
         m_CurScore += amount;
         Debug.Log("we in boys");
+        Debug.Log(m_CurScore);
+    }
+
+    private void UpdateHighScore()
+    {
         if ((m_CurScore > PlayerPrefs.GetInt("HS")) || (!PlayerPrefs.HasKey("HS")))
         {
-           PlayerPrefs.SetInt("HS", m_CurScore);
-        } 
+            PlayerPrefs.SetInt("HS", m_CurScore);
+
+        }
+        Debug.Log("player prefs val "+PlayerPrefs.GetInt("HS"));
     }
     #endregion
 
     #region Destruction
     private void OnDisable()
     {
-        IncreaseScore(0);
+        UpdateHighScore();
     }
     #endregion
 }

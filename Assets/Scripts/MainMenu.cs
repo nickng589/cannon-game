@@ -25,19 +25,21 @@ public class MainMenu : MonoBehaviour
     #region High Score
     private void UpdateHS()
     {
-        if (PlayerPrefs.HasKey("HighScore"))
+        Debug.Log("updating");
+        if (PlayerPrefs.HasKey("HS"))
         {
-            m_HighScore.text = m_Default.Replace("$S", PlayerPrefs.GetInt("HighScore").ToString());
+            Debug.Log("we have value");
+            m_HighScore.text = m_Default.Replace("$S", PlayerPrefs.GetInt("HS").ToString());
         } else
         {
-            PlayerPrefs.SetInt("HighScore", 0);
+            PlayerPrefs.SetInt("HS", 0);
             m_HighScore.text = m_Default.Replace("$S", "0");
         }
     }
 
     public void Reset()
     {
-        PlayerPrefs.SetInt("HighScore", 0);
+        PlayerPrefs.SetInt("HS", 0);
         UpdateHS();
     }
     #endregion

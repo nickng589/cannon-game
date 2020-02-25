@@ -70,7 +70,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (col.CompareTag("Rock"))
         {
-            SceneManager.LoadScene("Lose-Screen");
+            SceneManager.LoadScene("Start-Screen");
         }
     }
 }
