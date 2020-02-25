@@ -48,7 +48,7 @@ public class RockScript : MonoBehaviour
         //Debug.Log("HI");
         if (coll.gameObject.tag == "Projectile")
         {
-           // Score.singleton.IncreaseScore(size);
+            //Score.singleton.IncreaseScore(size);
             if (size > 1)
             {
                 Debug.Log("HIT");

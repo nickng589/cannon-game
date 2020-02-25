@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cannon-Game.unity
     guid: 07b7346752f884d5e829ab3a4e674700
+  - enabled: 1
+    path: Assets/Scenes/Lose-Screen.unity
+    guid: f4282da8981ef8d429c656fb6058b27e
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
