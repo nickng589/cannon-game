@@ -63,5 +63,12 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
     #endregion
+
+    #region Load Main Menu
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Start-Screen");
+    }
+    #endregion
 }
 
