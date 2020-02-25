@@ -44,9 +44,11 @@ public class RockScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+    
         //Debug.Log("HI");
         if (coll.gameObject.tag == "Projectile")
         {
+           // Score.singleton.IncreaseScore(size);
             if (size > 1)
             {
                 Debug.Log("HIT");
@@ -61,8 +63,8 @@ public class RockScript : MonoBehaviour
                 //baby2.GetComponent<RockScript>().babyRock1 = Resources.Load("Prefabs/RockCopy") as GameObject;
                 //baby.SetActive(true);
             }
+     
             Destroy(gameObject);
-            //Score.singleton.IncreaseScore(size);
         }
         if (coll.gameObject.tag == "Player")
         {

@@ -25,9 +25,10 @@ public class Score : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         m_CurScore += amount;
-        if ((m_CurScore > PlayerPrefs.GetInt("HighScore")) || (!PlayerPrefs.HasKey("HighScore")))
+        Debug.Log("we in boys");
+        if ((m_CurScore > PlayerPrefs.GetInt("HS")) || (!PlayerPrefs.HasKey("HS")))
         {
-           PlayerPrefs.SetInt("HighScore", m_CurScore);
+           PlayerPrefs.SetInt("HS", m_CurScore);
         } 
     }
     #endregion
