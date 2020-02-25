@@ -31,7 +31,11 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(delay);
-        Instantiate(rock, new Vector3(Random.Range(stageDimensions.x, stageDimensions.x), stageDimensions.y), Quaternion.identity);
+        while (true)
+        {
+            yield return new WaitForSeconds(delay);
+            GameObject r = Instantiate(rock, new Vector3(Random.Range(-stageDimensions.x, stageDimensions.x), stageDimensions.y + 5), Quaternion.identity);
+            r.GetComponent<RockScript>().size = 16;
+        }
     }
 }
