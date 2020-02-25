@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField]
     private Text m_HighScore;
+    private Text m_CurrentScore;
 
     public void Awake()
     {
