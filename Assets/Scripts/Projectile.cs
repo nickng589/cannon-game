@@ -12,4 +12,12 @@ public class Projectile : MonoBehaviour
         projectileRigidbody = GetComponent<Rigidbody2D>();
         projectileRigidbody.velocity = new Vector2(0, 5);
     }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Rock")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -10,6 +10,9 @@ public class PlayerScript : MonoBehaviour
     float yAxis;
     float cooldown;
 
+    Vector3 stageDimensions;
+    Vector2 size;
+
     [SerializeField]
     GameObject projectile;
 
@@ -17,11 +20,11 @@ public class PlayerScript : MonoBehaviour
     {
         cooldown = 0;
         playerRigidbody = GetComponent<Rigidbody2D>();
-        Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        float width = GetComponent<SpriteRenderer>().bounds.size.x;
-        //Debug.Log(stageDimensions.x);
-        //Debug.Log(stageDimensions.y);
-        //Debug.Log("width: " + width);
+        stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        size = GetComponent<BoxCollider2D>().size;
+        Debug.Log(stageDimensions.x);
+        Debug.Log(stageDimensions.y);
+        Debug.Log("width: " + size.x);
     }
 
     void Update()
@@ -44,16 +47,21 @@ public class PlayerScript : MonoBehaviour
 
     void move()
     {
+        Vector3 p = transform.position;
         Vector2 movementVector = new Vector2(xAxis, 0);
         movementVector = movementVector * 4;
-        playerRigidbody.velocity = movementVector;
-        if (xAxis < 0)
+        //playerRigidbody.velocity = movementVector;
+        if (p.x > -stageDimensions.x + size.x/2 && movementVector.x <0)
         {
+            playerRigidbody.velocity = movementVector;
             //Debug.Log("LEFT");
         }
-        else if (xAxis > 0)
+        else if (p.x < stageDimensions.x - size.x / 2  && movementVector.x > 0)
         {
-            //Debug.Log("RIGHT");
+            playerRigidbody.velocity = movementVector;
+        } else
+        {
+            playerRigidbody.velocity = new Vector2(0, 0);
         }
     }
 
