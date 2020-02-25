@@ -46,14 +46,14 @@ public class MainMenu : MonoBehaviour
     #region StartButton
     public void Play()
 	{
-        SceneManager.LoadScene("Game-Screen");
+        SceneManager.LoadScene("Cannon-Game");
 	}
     #endregion
 
     #region Reset HighScore
     public void Restart()
 	{
-        SceneManager.LoadScene("Game-Screen");
+        SceneManager.LoadScene("Cannon-Game");
     }
     #endregion
 
