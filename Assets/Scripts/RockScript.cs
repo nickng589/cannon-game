@@ -62,7 +62,7 @@ public class RockScript : MonoBehaviour
                 //baby.SetActive(true);
             }
             Destroy(gameObject);
-            Score.singleton.IncreaseScore(size);
+            //Score.singleton.IncreaseScore(size);
         }
         if (coll.gameObject.tag == "Player")
         {
